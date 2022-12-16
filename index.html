@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend concepts</title>
+</head>
+<body>
+    <h1>CSS position values</h1>
+    <div class="carousel">
+        <a href="#slide-1">1</a>
+        <a href="#slide-2">2</a>
+        <a href="#slide-3">3</a>
+        <a href="#slide-4">4</a>
+        <a href="#slide-5">5</a>
+        <div class="slides">
+            <div id="slide-1">
+                <h2>position: static</h2>
+                <p>Es el valor por predeterminado, no se necesita escribir explicitamente. Se usa cuando no se necesita mostrar el contenido de ninguna manera especial, así de simple. </p>
+            </div>
+            <div id="slide-2">
+                <h2>position: relative</h2>
+                <p>Para posicionar relativo a su posición normal, donde estaría con static. Se usan las propiedades de left, top, right y bottom para dar el offset que quieras relativo a la posición normal. El demás contenido lo trata como si siguiera donde mismo. Un caso de uso muy común es cuando quieres que un position absolute se posicione en base a su padre, entonces al padre le pones relative.</p>
+            </div>
+            <div id="slide-3">
+                <h2>position: absolute</h2>
+                <p>Se posiciona relativo al ancestro más cercano que tenga una position diferente a static. Si no existe este ancestro, es relativo al body. Igualmente se usa left, top, etc. A diferencia de relative, demás contenido actua como si ya no existeria y pueden tomar su posición, por esto mismo un caso de uso es cuando quieres poner una cosa sobre la otra. </p>
+            </div>
+            <div id="slide-4">
+                <h2>position: fixed</h2>
+                <p>Se posiciona relativo a la ventana del navegador, por ejemplo, siempre top-right, siempre bottom-left, etc. Ejemplo muy común es un header que se queda arriba incluso cuando haces scroll hacia abajo.</p>
+            </div>
+            <div id="slide-5">
+                <h2>position: sticky</h2>
+                <p>Es un híbrido entre relative y fixed. Es relativo hasta que se llega al offset especificado. Caso de uso común es cuando se tienen multiples headings, y de acorde a que se hacia scroll down, los headings se van pegando arriba uno tras el otro.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
